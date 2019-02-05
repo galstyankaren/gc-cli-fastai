@@ -25,5 +25,5 @@ git clone https://github.com/galstyankaren/gc-cli-fastai.git
 4. Show usage
 
 ```bash
- source ~/.bash_profile
+ gc-cli-fastai --help
  ```
