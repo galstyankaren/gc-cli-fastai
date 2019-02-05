@@ -1,14 +1,5 @@
 #!/usr/bin/env bash
 
-## 1) Make the shell script executable
-##  chmod +x gc-cli-fast-ai.sh
-##
-## 2) Add the following lines to your .bash_profil/.zshrc/..
-# alias gc-cli-fastai="path/to/gci-cli-fastai"
-# export ZONE="europe-west4-b"
-# export INSTANCE_NAME_CPU="cpu-fastai-instance"
-# export INSTANCE_NAME_GPU="gpu-fastai-instance"
-
 option=$1
 argument=$2
 user="jupyther"
@@ -21,6 +12,7 @@ usage() {
         start   start the cloud instance
         stop    stop the cloud instance
         ssh     ssh into the cloud instance
+        help    show usage
     ARGUMENTS:
         cpu     run the cpu instance
         gpu     run the gpu instance
@@ -76,6 +68,9 @@ case $option in
 		;;
     "ssh")
 		ssh
+		;;
+    "help" | "-h" | "--help")
+		usage
 		;;
 	*)
 		usage
